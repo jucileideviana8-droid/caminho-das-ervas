@@ -1,59 +1,72 @@
-# FrontCaminhoDasErvas
+## 📸 Demonstração do Projeto
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+### Página Inicial
+![Home do Projeto](./screenshots/home.png)
 
-## Development server
+### Galeria de Produtos
+![Vitrine de Produtos](./screenshots/Captura%20de%20tela%202026-05-08%202147.png)
 
-To start a local development server, run:
 
-```bash
-ng serve
-```
+# 🌿 Caminho das Ervas - E-commerce Artesanal
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Este é um projeto de e-commerce completo (Full Stack) desenvolvido para a loja **Caminho das Ervas**, especializada em produtos naturais e rituais de autocuidado. O sistema destaca-se pela gestão dinâmica de catálogo através de planilhas.
 
-## Code scaffolding
+## Diferencial Técnico: Gestão via Excel
+Diferente de e-commerces tradicionais onde o cadastro é manual via formulário, este projeto implementa um **serviço de ingestão de dados automatizado**:
+- **Fonte de Dados:** Um arquivo `.xlsx` (Excel) centraliza o estoque, preços e caminhos de imagens.
+- **Processamento:** O backend em Node.js lê a planilha utilizando a biblioteca `XLSX`, valida os campos e sincroniza os dados com um banco de dados **SQLite**.
+- **Automação:** Toda vez que o servidor é iniciado, ele verifica atualizações na planilha e reflete as mudanças instantaneamente na vitrine do Angular.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 🔧 Pré-requisitos
+- **Node.js** (v18 ou superior)
+- **Angular CLI** (v17 ou superior)
+- **VS Code** (recomendado)
 
-```bash
-ng generate component component-name
-```
+## 🛠️ Tecnologias Utilizadas
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Front-end
+- **Angular 17+**: Utilizando as novas syntax control blocks (`@for`, `@if`).
+- **CSS3**: Layout responsivo e estilização customizada.
+- **TypeScript**: Tipagem forte para garantir a integridade dos dados dos produtos.
 
-```bash
-ng generate --help
-```
+### Back-end
+- **Node.js & Express**: API REST para servir os dados ao front-end.
+- **SQLite3**: Banco de dados leve e eficiente para armazenamento local.
+- **XLSX**: Biblioteca para parsing e leitura de arquivos Excel.
 
-## Building
+## 📋 Como Funciona a Importação
 
-To build the project run:
+1. O administrador atualiza a planilha `produtos_loja.xlsx` na raiz do projeto.
+2. O servidor Node.js realiza o `parse` dos dados.
+3. O banco de dados `database.db` é limpo e repovoado com as informações atualizadas.
+4. O Front-end consome a rota `/api/produtos` e renderiza os cards com as imagens armazenadas em `assets/img/`.
 
-```bash
-ng build
-```
+## ⚙️ Como Executar o Projeto
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com
+   ```
 
-## Running unit tests
+2. **Instale as dependências:**
+   ```bash
+   # No diretório raiz
+   npm install
+   ```
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+3. **Inicie o Backend:**
+   ```bash
+   node backend/server.js
+   ```
 
-```bash
-ng test
-```
+4. **Inicie o Front-end:**
+   ```bash
+   ng serve
+   ```
+   Acesse: `http://localhost:4200`
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+Desenvolvido por **Jucileide Viana**
+**Anderson Marques da Silva**
+**Bianca Medeiros Labiapari**
+**Matheus da Silva Bissolati**
