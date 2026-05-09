@@ -1,16 +1,16 @@
 ## 📸 Demonstração do Projeto
 
 ### Página Inicial
-![Home do Projeto](./screenshots/pagina-produtos.png)
+![Home do Projeto](./screenshots/pagina.png)
 
 ### Galeria de Produtos
-![Vitrine de Produtos](./screenshots/navegacao-categoria.png)
+![Vitrine de Produtos](./screenshots/vitrine.png)
 
 ### Galeria de Produtos
-![Vitrine de Produtos](./screenshots/adicionando-produtos.png)
+![Vitrine de Produtos](./screenshots/contatos.png)
 
 ### Galeria de Produtos
-![Vitrine de Produtos](./screenshots/contatos-tela.png)
+![Vitrine de Produtos](./screenshots/p-i.png)
 
 
 # 🌿 Caminho das Ervas - E-commerce Artesanal
