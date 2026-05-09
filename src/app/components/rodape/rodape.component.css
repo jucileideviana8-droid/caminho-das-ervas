@@ -7,4 +7,31 @@ footer {
     footer p {
       margin: 80px 15px;
     }
-  
+  :host {
+  display: block;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 450px; /* Altura fixa para alinhar os botões */
+  padding: 15px;
+  border: 1px solid #eee;
+}
+
+.preco {
+  color: #d32f2f;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #1b5e20;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}

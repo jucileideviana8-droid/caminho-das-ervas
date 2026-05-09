@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { produtoModel } from '../models/produto.model';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({ providedIn: 'root' })
@@ -11,5 +11,10 @@ export class ProdutoService {
 
   listar() {
     return this.http.get<any[]>(this.API);
+  }
+
+  getProdutos(): Observable<any[]> {
+    // O caminho aponta para o JSON gerado da sua planilha
+    return this.http.get<any[]>('assets/dados/produtos.json');
   }
 }

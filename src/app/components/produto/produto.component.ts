@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { produtoModel } from '../../models/produto.model';
 import { CommonModule } from '@angular/common';
 import { CarrinhoService } from '../../services/carrinho.service'; 
@@ -11,18 +11,19 @@ import { ProdutoService } from '../../services/produto.service';
   templateUrl: './produto.component.html',
   styleUrl: './produto.component.css',
 })
-
-
-export class ProdutoComponent {
+export class ProdutoComponent implements OnInit { // Removida a vírgula incorreta
   @Input() produto!: produtoModel;
 
-  produtos: any[] = [];
+  constructor(
+    private service: ProdutoService, 
+    private carrinhoService: CarrinhoService
+  ) {}
 
-ngOnInit() {
-  this.service.listar().subscribe(dados => this.produtos = dados);
-}
-
-  constructor (private service: ProdutoService, private carrinhoService: CarrinhoService) {}
+  ngOnInit(): void {
+    // Não precisa de subscribe aqui! 
+    // O 'produto' já vem preenchido pelo componente pai.
+    console.log('Produto recebido no card:', this.produto);
+  }
   
   adicionarAoCarrinho() {
     this.carrinhoService.adicionarAoCarrinho(this.produto);

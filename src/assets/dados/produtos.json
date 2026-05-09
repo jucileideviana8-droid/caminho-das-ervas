@@ -1,0 +1,289 @@
+[
+  {
+    "id": 1,
+    "nome": "Kit 2 Vela Massagem Vegana aromaterapia Lavanda 100g cada pote octogonal-2 velas massagem",
+    "descricao": "Kit 2 Velas massagem Aromáticas Lavanda & Rosa Mosqueta em Gesso Octogonal (100g cada)",
+    "quantidade": 1,
+    "preco": 26.90,
+    "categoria": "massagem",
+    "imagem": "assets/img/velas-gesso.jpeg"
+  },
+  {
+    "id": 2,
+    "nome": "Tratamento anti acne- 3 sabonetes artesanal de açafrão e dolomita (50 g cd) pós depilação Pele de porcelana sem espinhas",
+    "descricao": "Três de Sabonetes Açafrão, Dolomita e Óleo de Amêndoas (50g cada)",
+    "quantidade": 1,
+    "preco": 19.90,
+    "categoria": "banho",
+    "imagem": "assets/img/sabonete-acafrao.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Kit Spa Escalda pés 14 ervas 50g + toalha de mão(variação de cor conforme estoque)+ bucha vegetal e caixa de presente",
+    "descricao": "Kit Escalda Pés 14 Elementos foi meticulosamente desenvolvido para ser muito mais que um banho de pés.",
+    "quantidade": 1,
+    "preco": 18.90,
+    "categoria": "banho",
+    "imagem": "assets/img/kit-escaldas-pes.jpeg"
+  },
+  {
+    "id": 4,
+    "nome": "Kit presente Sabonete artesanal maracujá 90g e toalha de mão(Cores variadas) em caixa de presente para todo tipo de pele",
+    "descricao": "Kit Sensorial Maracujá: O Refúgio Tropical em Sua Casa",
+    "quantidade": 1,
+    "preco": 43.90,
+    "categoria": "pele",
+    "imagem": "assets/img/kit-maracuja.jpeg"
+  },
+  {
+    "id": 5,
+    "nome": "Sabonete Artesanal de Arruda, sal grosso e Alecrim.",
+    "descricao": "Purificação e bem-estar com o nosso sabonete artesanal, enriquecido com arruda, alecrim e sal grosso.",
+    "quantidade": 1,
+    "preco": 14.90,
+    "categoria": "pele",
+    "imagem": "assets/img/sabonete-arruda.png"
+  },
+  {
+    "id": 6,
+    "nome": "Sabonete Natural de Dolomita - 100g com Propriedades Anti-Inflamatórias e Clareador",
+    "descricao": "Descubra o Sabonete Natural de Açafrão e Dolomita!",
+    "quantidade": 1,
+    "preco": 14.90,
+    "categoria": "pele",
+    "imagem": "assets/img/dolomita.jpg"
+  },
+  {
+    "id": 7,
+    "nome": "Sabonete liquido Geléia de banho morango e lichia 120 ml",
+    "descricao": "Geleia de Banho Morango & Lichia - 120ml Transforme seu banho em um ritual mágico de autocuidado! 🛀",
+    "quantidade": 1,
+    "preco": 14.90,
+    "categoria": "pele",
+    "imagem": "assets/img/geleia-morango.jpeg"
+  },
+  {
+    "id": 8,
+    "nome": "Vela Massagem aromaterapia (vegana) Morango ou Lavanda com óleo de rosa mosqueta em pote vidro 80g",
+    "descricao": "Vela de Massagem Vegana: Morango & Rosa mosqueta (80g) Um Toque Sensual, Nutrição Profunda e Aroma Irresistível",
+    "quantidade": 1,
+    "preco": 14.90,
+    "categoria": "massagem",
+    "imagem": "assets/img/vela-morango.png"
+  },
+  {
+    "id": 9,
+    "nome": "Sabonete Natural de Dolomita - 100g com Propriedades Anti-Inflamatórias e Clareador",
+    "descricao": "\"Pele de Porcelana\" (Sofisticado) Sabonete de Dolomita e Aveia - 100g (Artesanal Premium)",
+    "quantidade": 1,
+    "preco": 14.90,
+    "categoria": "pele",
+    "imagem": "assets/img/dolomita-aveia.jpeg"
+  },
+  {
+    "id": 10,
+    "nome": "Vela Massagem Aromaterapia Vegana Lavanda ou Morango c/óleo rosa mosqueta- pote vidro rolha 90g cad- Kit com 3 velas",
+    "descricao": "Kit Spa Relaxante Premium: Com 3 velas para massagem- aromaterapia- Pote de vidro 90g cada Um Ritual Aromático de morango ou lavanda com o tratamento rejuvenescedor do óleo rosa de mosqueta para a sua pele.",
+    "quantidade": 1,
+    "preco": 38.90,
+    "categoria": "massagem",
+    "imagem": "assets/img/trio-vela.jpeg"
+  },
+  {
+    "id": 11,
+    "nome": "Kit Spa Sabonete Maracujá 90 g + Geléia de banho espumante Maracujá e Lichia-120ml -Aromaterapia",
+    "descricao": "Kit Spa \"Abraço de Maracujá\" – Artesanal",
+    "quantidade": 1,
+    "preco": 33.90,
+    "categoria": "banho",
+    "imagem": "assets/img/maracuja-kit.jpeg"
+  },
+  {
+    "id": 12,
+    "nome": "Banho Spa sabonete artesanal relaxante geléia de maracujá com semente de lichia 120 ml",
+    "descricao": "Geleia de Banho Maracujá & Lichia – Spa Banho (120ml) Sinta o frescor do paraíso! Nossa Geléia de Banho Maracujá com Sementes de Lichia",
+    "quantidade": 1,
+    "preco": 33.90,
+    "categoria": "banho",
+    "imagem": "assets/img/geleia-maracuja.jpeg"
+  },
+  {
+    "id": 13,
+    "nome": "Sabonete artesanal clareador dolomita e aveia hidratante100g/1 bucha vegetal Kit com caixa presente",
+    "descricao": "Kit Spa \"Ritual de Beleza\" – Dolomita, Aveia & Bucha Vegetal Descubra o prazer de um SPA no conforto do seu lar.",
+    "quantidade": 1,
+    "preco": 33.90,
+    "categoria": "banho",
+    "imagem": "assets/img/dolomita-kit.jpeg"
+  },
+  {
+    "id": 14,
+    "nome": "Kit 4 sabonetes skincare completo dolomita e açafrão camomila dolomita e argila branca e maracujá",
+    "descricao": "Kit Skincare- tratamento completo- Pele de porcelana Transforme sua rotina de cuidados com a pele com este exclusivo Kit Spa Caseiro: 4 Sabonetes Artesanais Naturais (50g cada aprox.).",
+    "quantidade": 1,
+    "preco": 29.90,
+    "categoria": "banho",
+    "imagem": "assets/img/dolomita-acafrao.jpeg"
+  },
+  {
+    "id": 15,
+    "nome": "Kit faixas de cabelo bebê 4 unidades sortidas e decoradas em punho ribana e caixa presente",
+    "descricao": "Kit presente com 4 faixas de cabelo para bebes a partir de 4 meses até 3 anos de idade- Cores Rosa bebe- Salmão- Azul piscina e verde água.",
+    "quantidade": 1,
+    "preco": 12.90,
+    "categoria": "cabelo",
+    "imagem": "assets/img/faixa.jpeg"
+  },
+  {
+    "id": 16,
+    "nome": "Kit faixas de cabelo cores sortidas lisas com 14 unidades",
+    "descricao": "Kit Faixas de cabelo com 14 unidades lisa sortidas Este kit de 14 faixas de cabelo lisas é o acessório definitivo para quem busca versatilidade.",
+    "quantidade": 1,
+    "preco": 28.90,
+    "categoria": "cabelo",
+    "imagem": "assets/img/faixa-inf.jpeg"
+  },
+  {
+    "id": 17,
+    "nome": "Kit Vela massagem lavanda (aromaterapia)com óleo de amêndoas100g e Escalda Pés com 14 elementos Naturais 50g",
+    "descricao": "Transforme o autocuidado em um ritual sagrado com a nossa Linha SPA, um convite para desconectar do mundo e renovar as energias no conforto do lar.",
+    "quantidade": 1,
+    "preco": 23.90,
+    "categoria": "massagem",
+    "imagem": "assets/img/escalda-vela.jpeg"
+  },
+  {
+    "id": 18,
+    "nome": "Kit Spa Escalda pés, Sabonete Sal grosso, Alecrim e Arruda 100g CX Presente- Limpeza energética",
+    "descricao": "Kit Spa \"Limpeza energética\" – O Ritual Completo de Autocuidado Permita-se uma pausa no caos do dia a dia e traga o luxo de um Spa para o conforto do lar.",
+    "quantidade": 1,
+    "preco": 27.90,
+    "categoria": "banho",
+    "imagem": "assets/img/sabonete-escalda.jpeg"
+  },
+  {
+    "id": 19,
+    "nome": "Kit presente- Banho Spa- 2 Sabonetes Limpeza energética( Sal Grosso, Alecrim e Arruda)100 g cd/Toalha de mão cor variada",
+    "descricao": "Kit Banho-Spa/Limpeza energética. Renovação e Bem estar. Contém 2 sabonetes artesanais de Sal Grosso, Alecrim e arruda-100 g cada, uma toalha de mão decorativa e caixa de presente.",
+    "quantidade": 1,
+    "preco": 43.90,
+    "categoria": "pele",
+    "imagem": "assets/img/dois-limpeza.jpeg"
+  },
+  {
+    "id": 20,
+    "nome": "Kit Sabonete Artesanal Clareador Dolomita Hidratante| 2 sabonetes 100g cada1 toalha mão",
+    "descricao": "Tratamento clareador de manchas de pele e anti-sinais para todos os tipos de pele: Kit Banho-Spa: Ritual Spa de Dolomita-",
+    "quantidade": 1,
+    "preco": 43.90,
+    "categoria": "pele",
+    "imagem": "assets/img/dois-dolomita.jpeg"
+  },
+  {
+    "id": 21,
+    "nome": "Sabonete de Açafrão e Dolomita Clareador kit 3 sabonetes",
+    "descricao": "Kit com 3 sabonetes dolomita e açafrão depilatório, anti-inflamatório e clareador com 50 gramas cada.",
+    "quantidade": 1,
+    "preco": 19.90,
+    "categoria": "banho",
+    "imagem": "assets/img/tres-acafrao.jpeg"
+  },
+  {
+    "id": 22,
+    "nome": "Kit Spa refrescante com 2 sabonetes artesanais de maracujá 90 g cada, uma toalha de mão- Banho Aromaterapia",
+    "descricao": "Kit Spa \"Maracujá Refrescante\" Para todo tipo de pele:",
+    "quantidade": 1,
+    "preco": 43.90,
+    "categoria": "banho",
+    "imagem": "assets/img/dois-maracuja.jpeg"
+  },
+  {
+    "id": 23,
+    "nome": "Kit banho spa sabonete artesanal camomila e maracujá 100g e toalha de mão (cores variadas)",
+    "descricao": "Kit SPA em Casa: Sabonete Artesanal Camomila & Maracujá (100g) + Toalha de Mão",
+    "quantidade": 1,
+    "preco": 23.90,
+    "categoria": "pele",
+    "imagem": "assets/img/kit-camomila.jpeg"
+  },
+  {
+    "id": 24,
+    "nome": "Vela para Massagem aromaterapia (vegana) lavanda 200g em pote vidro com tampa- Premium",
+    "descricao": "Vela vegana para massagem com óleo de amendoas. Aromaterapia Lavanda- 200g.",
+    "quantidade": 1,
+    "preco": 28.90,
+    "categoria": "massagem",
+    "imagem": "assets/img/vela-premium.jpeg"
+  },
+  {
+    "id": 25,
+    "nome": "Vela Massagem Aromaterapia vegana lavanda ou morango e óleo mosqueta 80g cada atacado Kit 10 Lembrancinhas premium",
+    "descricao": "Kit Atacado: 10 Velas Veganas para Massagem (80g) – Relaxamento e Cuidado Premium",
+    "quantidade": 1,
+    "preco": 122.00,
+    "categoria": "massagem",
+    "imagem": "assets/img/vela-atacado.jpeg"
+  },
+  {
+    "id": 26,
+    "nome": "Kit aromatizador de ambiente, sabonete artesanal flor perfumada e escalda pés 14 ervas e sais",
+    "descricao": "Kit Presente SPA Artesanal - Conexão & Bem-Estar Combinando a delicadeza do artesanal com o poder da aromaterapia, é o presente perfeito para quem precisa desacelerar e se cuidar.",
+    "quantidade": 1,
+    "preco": 23.90,
+    "categoria": "fragancia",
+    "imagem": "assets/img/aroma-casa.jpeg"
+  },
+  {
+    "id": 27,
+    "nome": "Kit Spa- Escalda pés 14 elementos naturais 100 g + Bucha vegetal + caixa de presente",
+    "descricao": "Kit SPA \"Abraço de Pés\" - 14 Elementos da Natureza Transforme a correria do dia a dia em um ritual de purificação e descanso profundo.",
+    "quantidade": 1,
+    "preco": 18.90,
+    "categoria": "banho",
+    "imagem": "assets/img/bucha-escalda.jpeg"
+  },
+  {
+    "id": 28,
+    "nome": "Vela Massagem (vegana) aromaterapia lavanda /sabonete camomila e maracuja 100g e bucha vegetal",
+    "descricao": "Kit Banho SPA- Premium- 1 sabonete de camomila e maracujá- 1 vela aromática de lavanda massagem 100g e 1 bucha vegetal em Caixa de presente",
+    "quantidade": 1,
+    "preco": 33.90,
+    "categoria": "massagem",
+    "imagem": "assets/img/bucha-sabonete.jpeg"
+  },
+   {
+    "id": 29,
+    "nome": "Vela vegana massagem aromaterapia lavanda rosa 200gr linha luxo",
+    "descricao": "Vela vegana para massagem aromaterapia lavanda com óleo de rosa mosqueta 200gramas. Pote vidro",
+    "quantidade": 1,
+    "preco": 34.90,
+    "categoria": "massagem",
+    "imagem": "assets/img/vela-sabonete.jpeg"
+  },
+  {
+    "id": 30,
+    "nome": "Vela massagem vegana camomila e óleo de rosa mosqueta aromaterapia 100g pote octogonal",
+    "descricao": "Prepare-se para um momento de relaxamento profundo com a nossa Vela de Massagem Artesanal. Unindo o cuidado da pele com uma experiência sensorial única, esta vela não é apenas um item de decoração, mas um convite ao autocuidado.",
+    "quantidade": 1,
+    "preco": 14.90,
+    "categoria": "massagem",
+    "imagem": "assets/img/vela-camomila.jpeg"
+  },
+  {
+    "id": 32,
+    "nome": "Sabonete artesanal calmante de camomila e maracuja 100g-Todos os tipos de pele",
+    "descricao": "Sabonete artesanal de camomila e maracujá- 100g O sabonete artesanal de camomila e maracujá oferece uma combinação poderosa de propriedades calmantes, anti-inflamatórias e hidratantes, ideal para peles sensíveis e para promover o relaxamento.",
+    "quantidade": 1,
+    "preco": 14.90,
+    "categoria": "pele",
+    "imagem": "assets/img/camomila.jpeg"
+  },
+  {
+    "id": 33,
+    "nome": "Vela massagem beijável morango 100g e sabonete artesanal morango 50g- Kit sedução",
+    "descricao": "Kit Noite de Sedução: O Encontro Perfeito do Aroma e do Toque",
+    "quantidade": 1,
+    "preco": 23.90,
+    "categoria": "massagem",
+    "imagem": "assets/img/beijavel.jpeg"
+  }]
