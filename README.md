@@ -1,10 +1,10 @@
 ## 📸 Demonstração do Projeto
 
 ### Página Inicial
-![Vitrine de Produtos](./backend/backend/screenshots/banco-de-dados.png)
+![Vitrine de Produtos](./backend/screenshots/banco-de-dados.png)
 
 ### Galeria de Produtos
-![Vitrine de Produtos](./backend/backend/screenshots/produtos-loja.png)
+![Vitrine de Produtos](./backend/screenshots/produtos-loja.png)
 
 ### Galeria de Produtos
 ![Vitrine de Produtos](./backend/screenshots/carrinho-cadastro-pagamento.png)
