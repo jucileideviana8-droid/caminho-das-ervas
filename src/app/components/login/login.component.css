@@ -1,3 +1,4 @@
+/* Fundo escurecido e embaçado que cobre toda a tela */
 .overlay {
   position: fixed;
   top: 0;
@@ -6,73 +7,135 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(5px);
-
   display: flex;
   justify-content: center;
   align-items: center;
-
+  z-index: 2000;
   animation: fadeIn 0.3s ease;
 }
 
+/* Caixa central do Modal */
 .modal {
-  background: #fff;
-  padding: 25px;
+  background: #ffffff;
+  padding: 30px;
   border-radius: 12px;
-  width: 320px;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-
-  animation: slideUp 0.3s ease;
+  width: 90%;
+  max-width: 350px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.3s ease-out;
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 15px;
-  color: #2e7d32; 
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #2e7d32;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Inputs de texto e senha */
 input {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
   border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.2s;
 }
 
-button {
+input:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 5px rgba(46, 125, 50, 0.2);
+}
+
+/* Botão de Entrar / Cadastrar com formato de FOLHA */
+button[type="submit"] {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: none;
-  border-radius: 6px;
+  
+  /* ESTILO FOLHA: Cantos superior-esquerdo e inferior-direito arredondados */
+  border-radius: 30px 0 30px 0; 
+  
   background: #2e7d32;
   color: white;
   font-weight: bold;
+  font-size: 16px;
   cursor: pointer;
+  transition: all 0.4s ease; /* Transição suave para o efeito de inversão */
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);
 }
 
-button:hover {
-  background: #256628;
+button[type="submit"]:hover {
+  background: #1b5e20;
+  /* EFEITO DINÂMICO: Inverte o formato da folha no hover */
+  border-radius: 0 30px 0 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
+/* Botão de fechar (X) no canto superior */
 .close-btn {
   background: none;
-  color: #333;
-  font-size: 16px;
+  border: none;
+  color: #666;
+  font-size: 22px;
   position: absolute;
   right: 15px;
   top: 10px;
   cursor: pointer;
+  line-height: 1;
 }
 
-/* animações */
+.close-btn:hover {
+  color: #000;
+}
+
+/* Container do link para trocar entre login/cadastro */
+.toggle-container {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.toggle-container span {
+  color: #2e7d32;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.toggle-container span:hover {
+  text-decoration: underline;
+}
+
+/* Estilo da mensagem de erro */
+.error-msg {
+  color: #d32f2f;
+  background: #ffebee;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+  border: 1px solid #ffcdd2;
+}
+
+/* Animações de entrada */
 @keyframes fadeIn {
-  from { opacity: 0 }
-  to { opacity: 1 }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideUp {
   from {
-    transform: translateY(30px);
+    transform: translateY(20px);
     opacity: 0;
   }
   to {

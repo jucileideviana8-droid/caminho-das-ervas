@@ -14,9 +14,8 @@ import { CarrinhoComponent } from './components/carrinho/carrinho.component';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
-    PaginaInicialComponent,
-    ProdutosComponent,
+   
+    RouterOutlet, 
     RodapeComponent,
     CabecalhoComponent,
     LoginComponent, CarrinhoComponent

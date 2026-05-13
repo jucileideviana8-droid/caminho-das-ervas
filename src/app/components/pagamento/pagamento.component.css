@@ -1,0 +1,163 @@
+.pagamento-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 { color: #2d3e33; margin-bottom: 30px; }
+
+.layout-pagamento {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+}
+
+.checkout-form, .resumo-pedido {
+  background: #fdfdfd;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.metodos-selecao {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.campos input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.resumo-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
+  color: #2d3e33;
+  margin-top: 15px;
+}
+
+.btn-confirmar {
+  margin-top: 25px;
+  width: 100%;
+  padding: 15px;
+  background-color: #5b7f6a;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-confirmar:hover { background-color: #2d3e33; }
+
+@media (max-width: 768px) {
+  .layout-pagamento { grid-template-columns: 1fr; }
+}
+
+.sucesso-container {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fdfdfd;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.check-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #5b7f6a;
+  color: white;
+  font-size: 50px;
+  line-height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.sucesso-container h2 {
+  color: #2d3e33;
+  margin-bottom: 10px;
+}
+
+.sucesso-container p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.sucesso-container .btn-confirmar {
+  max-width: 300px;
+}
+
+.btn-confirmar:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.aviso-erro {
+  color: #cc0000;
+  font-size: 12px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.detalhes-pedido {
+  background: #f9fbf9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: left;
+  max-width: 450px;
+}
+
+.detalhes-pedido h3 {
+  color: #2d3e33;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #5b7f6a;
+  display: inline-block;
+}
+
+.item-finalizado {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.total-finalizado {
+  text-align: right;
+  font-size: 1.1rem;
+  color: #2d3e33;
+  margin-top: 10px;
+}
+
+.entrega {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+}

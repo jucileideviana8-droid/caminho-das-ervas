@@ -3,9 +3,15 @@
   font-family: sans-serif;
   border-bottom: 1px solid #eee;
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.logo{
+.logo {
   width: 150px;
   padding-top: 10px;
 }
@@ -30,7 +36,6 @@
   max-width: 400px; 
 }
 
-
 .search-input {
   width: 100%;
   padding: 10px 40px 10px 15px; 
@@ -47,19 +52,36 @@
   right: 15px; 
   top: 50%; 
   transform: translateY(-50%); 
-  color: #134e16; 
+  color: #888; 
   pointer-events: none; 
   font-size: 16px;
 }
 
-.user-menu{
-    background: #4f6f5c;
+/* AJUSTE: Botão de Login e Menu do Usuário em formato de FOLHA */
+.user-menu {
+    background: #4f6f5c; /* Verde tema */
     color: #ffffff;
     border: none;
-    padding: 8px 20px;
-    border-radius: 20px;
+    padding: 8px 22px;
+    /* Formato de Folha */
+    border-radius: 25px 0 25px 0; 
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.user-menu:hover {
+    background: #3a5244;
+    /* Efeito de inversão da folha no hover */
+    border-radius: 0 25px 0 25px;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .nav-bar {
@@ -76,21 +98,33 @@
 
 .nav-list li a, .dropbtn {
   text-decoration: none;
-  color: #197a31;
+  color: #333;
   font-size: 14px;
   padding: 10px 0;
   display: block;
   border: none;
   background: none;
   cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-list li a:hover {
+  color: #4f6f5c;
 }
 
 .nav-list li a.active {
-  color: #000a05; 
-  border-bottom: 2px solid #042708;
+  color: #021a07; 
+  font-weight: bold;
+  border-bottom: 2px solid #021409;
 }
-
 
 .logout-icon {
   cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.logout-icon:hover {
+  color: #ffcdd2; 
 }

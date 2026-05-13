@@ -1,4 +1,3 @@
-
 .carrinho-overlay {
   position: fixed;
   top: 0;
@@ -17,8 +16,7 @@
   background: white;
   box-shadow: -5px 0 15px rgba(0,0,0,0.1);
   display: flex;
-  flex-direction: column;
-  padding: 20px;
+  flex-direction: column; 
 }
 
 .carrinho-header {
@@ -26,7 +24,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #eee;
-  padding-bottom: 15px;
+  padding: 20px; /
 }
 
 .carrinho-header h3 {
@@ -35,9 +33,9 @@
 }
 
 .carrinho-itens {
-  flex-grow: 1;
-  overflow-y: auto;
-  padding: 20px 0;
+  flex-grow: 1; 
+  overflow-y: auto; 
+  padding: 20px;
 }
 
 .item-linha {
@@ -123,32 +121,21 @@
 }
 
 .carrinho-footer {
-  border-top: 1px solid #eee;
-  padding-top: 20px;
-  margin-bottom: 20px;
-}
-
-.carrinho-footer p {
-  font-size: 1.1em;
-  font-weight: bold;
-  margin-bottom: 15px;
-  text-align: right;
-  color: #2d3e33;
+    border-top: 1px solid #eee;
+    padding: 20px;
+    background-color: white;
+    margin-top: auto;
 }
 
 .btn-finalizar {
-  width: 100%;
-  padding: 15px;
-  background-color: #2d3e33;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.btn-finalizar:hover {
-  background-color: #1e2922;
+    width: 100%;
+    padding: 15px;
+    background-color: #2b4436;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05); 
 }

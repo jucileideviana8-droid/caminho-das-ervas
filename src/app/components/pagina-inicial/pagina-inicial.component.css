@@ -5,28 +5,30 @@
       color: #2e2e2e;
       line-height: 1.6;
     }
-    header {
-      background: linear-gradient(135deg, #5b7f6a, #a3c9a8);
-      color: #fff;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
-    }
+  header {
+  /* Define os 4 fundos de árvores com posições horizontais consecutivas (da direita para a esquerda) */
+  background: linear-gradient(135deg, rgba(23, 100, 55, 0.92), rgba(22, 128, 36, 0.92)), 
+              url('/assets/img/arvores.png') right bottom no-repeat,
+              url('/assets/img/arvore.png') calc(100% - 150px) bottom no-repeat,
+              url('/assets/img/arvo.png') calc(100% - 300px) bottom no-repeat,
+              url('/assets/img/arv.png') calc(100% - 450px) bottom no-repeat;
+              
+  /* Define o tamanho fixo para as 4 imagens consecutivamente */
+  background-size: auto, 200px, 200px, 200px, 200px;
+  
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
     section {
-      padding: 60px 20px;
+      padding: 65px 30px;
       max-width: 1100px;
       margin: auto;
     }
     h2 {
-      color: #4f6f5c;
+      color: #2d8b53;
       font-size: 2rem;
       margin-bottom: 20px;
     }
@@ -65,3 +67,106 @@
       text-decoration: none;
       font-weight: 600;
     }
+    
+.folhas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1; 
+  pointer-events: none; 
+}
+
+.folhas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1; 
+  pointer-events: none; 
+}
+
+
+.folha {
+  position: absolute;
+  width: 28px;  
+  height: 42px; 
+  
+  /* Gradiente Verde-Escuro Botânico com vinco central simulado */
+  background: linear-gradient(135deg, #1b382b 0%, #177548 50%, #14291f 100%);
+  
+  border-radius: 0 85% 15% 85%; 
+  
+  opacity: 0.85; 
+  top: -60px;
+  box-shadow: inset -2px 2px 4px rgba(0, 0, 0, 0.3), 2px 4px 6px rgba(0, 0, 0, 0.1);
+  
+  animation: cairVertical 9s linear infinite, balancoNatural 4s ease-in-out infinite alternate;
+}
+
+
+.folha:nth-child(1) { left: 20%;  animation-delay: 0s;  animation-duration: 5s;  transform: scale(1.1); }
+.folha:nth-child(2) { left: 38%; animation-delay: 2.5s; animation-duration: 4s; transform: scale(0.9) rotate(15deg); }
+.folha:nth-child(3) { left: 48%; animation-delay: 1.2s; animation-duration: 5s; transform: scale(1.3) rotate(-10deg); }
+.folha:nth-child(4) { left: 68%; animation-delay: 4.8s; animation-duration: 7s; transform: scale(0.8) rotate(25deg); }
+.folha:nth-child(5) { left: 82%; animation-delay: 0.4s; animation-duration: 6.5s; transform: scale(1.2); }
+.folha:nth-child(6) { left: 94%; animation-delay: 3.2s; animation-duration: 9s;  transform: scale(1.0) rotate(-20deg); }
+
+
+@keyframes cairVertical {
+  0% {
+    top: -80px;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes balancoNatural {
+  0% {
+    transform: translateX(0) rotateY(0deg) rotate(0deg);
+  }
+  50% {
+    transform: translateX(25px) rotateY(180deg) rotate(15deg); 
+  }
+  100% {
+    transform: translateX(55px) rotateY(360deg) rotate(35deg); 
+  }
+}
+.container {
+    background-color: #fbfdf9;
+    padding: 40px 20px;
+    position: relative; 
+    z-index: 1; 
+}
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    
+  
+    background-image: url('/assets/img/arvores.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; 
+    background-size: 550px; 
+    
+    opacity: 0.15; 
+    z-index: -1; 
+    pointer-events: none;
+}
+
+.container > * {
+    position: relative;
+    z-index: 2;
+}
+
+.folhas-container {
+    z-index: 3;
+}

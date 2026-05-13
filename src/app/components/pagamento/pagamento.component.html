@@ -1,0 +1,95 @@
+<div class="pagamento-container">
+  @if (!pagamentoRealizado) {
+    <h2>Finalizar Pedido</h2>
+
+    <div class="layout-pagamento">
+      <form class="checkout-form" [formGroup]="formularioPagamento">
+        <h3>Informações de Pagamento</h3>
+        
+        <div class="metodos-selecao">
+          <label>
+            <input type="radio" name="metodo" value="pix" checked> PIX (5% de desconto)
+          </label>
+          <label>
+            <input type="radio" name="metodo" value="cartao"> Cartão de Crédito
+          </label>
+        </div>
+
+        <div class="campos">
+          <input type="text" formControlName="nome" placeholder="Nome Completo">
+          <input type="text" formControlName="cpf" placeholder="CPF (apenas números)">
+          <input type="text" formControlName="endereco" placeholder="Endereço de Entrega">
+        </div>
+
+        <button 
+          type="button" 
+          class="btn-confirmar" 
+          [disabled]="formularioPagamento.invalid"
+          (click)="confirmarPagamento()"> 
+          Confirmar Pagamento
+        </button>
+        
+        @if (formularioPagamento.invalid && formularioPagamento.dirty) {
+          <p class="aviso-erro">
+            * Preencha todos os campos corretamente para continuar.
+          </p>
+        }
+      </form>
+
+      <!-- Resumo Lateral (Antes de confirmar) -->
+      <div class="resumo-pedido">
+        <h3>Resumo do Pedido</h3>
+        @for (item of carrinhoService.getItens(); track item.produto.id) {
+          <div class="resumo-item">
+            <span>{{ item.quantidade }}x {{ item.produto.nome }}</span>
+            <span>{{ (item.produto.preco * item.quantidade) | currency:'BRL' }}</span>
+          </div>
+        }
+        <hr>
+        <div class="total">
+          <strong>Total:</strong>
+          <strong>{{ carrinhoService.getPrecoTotal() | currency:'BRL' }}</strong>
+        </div>
+      </div>
+    </div>
+
+  } @else {
+   
+    <div class="sucesso-container">
+      <div class="check-icon">✓</div>
+      <h2>Pedido confirmado com sucesso!</h2>
+      
+      <p>Agradecemos pela preferência <strong>Caminho das Ervas & Natureza.com</strong>.</p>
+      
+      <!-- Seção Ver Pedidos (Mostra o que foi comprado) -->
+      <div class="detalhes-compra-finalizada">
+        <h3>Itens do seu pedido:</h3>
+        <div class="lista-final">
+          @for (item of itensResumo; track item.produto.id) {
+            <div class="resumo-item">
+              <span>{{ item.quantidade }}x {{ item.produto.nome }}</span>
+              <span>{{ (item.produto.preco * item.quantidade) | currency:'BRL' }}</span>
+            </div>
+          }
+        </div>
+        <hr>
+        <div class="total">
+          <strong>Valor total a pagar:</strong>
+          <strong>{{ valorTotal | currency:'BRL' }}</strong>
+        
+        </div>
+        <p style="margin-top: 20px;">
+          <strong>Endereço de entrega:</strong> {{ formularioPagamento.value.endereco }}
+        </p>
+      </div>
+
+      <a href="https://wa.me/5511959447449" target="_blank" class="btn-confirmar" style="text-decoration: none; display: inline-block; text-align: center;">
+  Concluir Pagamento no WhatsApp
+</a>
+
+      <button type="button" class="btn-voltar" routerLink="/produtos" style="margin-top: 15px; background: #065d08a2; color: #fff;">
+        Voltar para os Produtos
+      </button>
+    </div>
+  }
+</div>

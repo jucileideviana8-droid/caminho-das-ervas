@@ -1,22 +1,16 @@
 <app-cabecalho 
   [usuarioLogado]="usuarioLogado"
-  (onChangePaginaAtual)="onChangePaginaAtual($event)"
   (abrirLoginEvent)="mostrarLogin = true"
   (logoutEvent)="logout()">
 </app-cabecalho>
-
 
 @if(mostrarLogin){
   <app-login (loginSucesso)="onLoginSucesso()"></app-login>
 }
 
-@if(paginaAtual=='paginaInicial'){
-    <app-pagina-inicial></app-pagina-inicial>
-}
-@else{
-    <app-produtos [filtroProdutos]="paginaAtual"></app-produtos>
-}
+<main>
+  <router-outlet></router-outlet>
+</main>
+
 <app-carrinho></app-carrinho>
 <app-rodape></app-rodape>
-<router-outlet />
-

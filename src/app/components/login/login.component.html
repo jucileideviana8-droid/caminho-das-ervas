@@ -1,17 +1,26 @@
 <div class="overlay">
-
   <div class="modal">
-    
     <button class="close-btn" (click)="fechar()">✕</button>
 
-    <h2>Login</h2>
+    <h2>{{ isLoginMode ? 'Login' : 'Cadastro' }}</h2>
 
     <form (ngSubmit)="onSubmit()">
+      <!-- Campo Nome: Só aparece no modo de Cadastro -->
+      @if (!isLoginMode) {
+        <input 
+          type="text" 
+          [(ngModel)]="nome" 
+          name="nome"
+          placeholder="Nome completo"
+          required
+        >
+      }
+
       <input 
         type="email" 
         [(ngModel)]="email" 
         name="email"
-        placeholder="Email"
+        placeholder="E-mail"
         required
       >
 
@@ -23,13 +32,24 @@
         required
       >
 
-      <button type="submit">Entrar</button>
+      <button type="submit">
+        {{ isLoginMode ? 'Entrar' : 'Cadastrar' }}
+      </button>
     </form>
 
-    <p *ngIf="errorMessage" style="color: red; text-align: center;">
-      {{ errorMessage }}
-    </p>
+    <div class="toggle-container">
+      <p>
+        {{ isLoginMode ? 'Não tem uma conta?' : 'Já possui conta?' }}
+        <span (click)="toggleMode()">
+          {{ isLoginMode ? 'Cadastre-se' : 'Faça Login' }}
+        </span>
+      </p>
+    </div>
 
+    @if (errorMessage) {
+      <p class="error-msg">
+        {{ errorMessage }}
+      </p>
+    }
   </div>
-
 </div>

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ConteudoCarrinhoComponent } from '../conteudo-carrinho/conteudo-carrinho.component';
+import { ConteudoCarrinhoComponent } from './conteudo-carrinho/conteudo-carrinho.component';
 import { CarrinhoService } from '../../services/carrinho.service';
 
 @Component({

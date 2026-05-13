@@ -11,8 +11,18 @@ import { ProdutoService } from '../../services/produto.service';
   templateUrl: './produto.component.html',
   styleUrl: './produto.component.css',
 })
-export class ProdutoComponent implements OnInit { // Removida a vírgula incorreta
+export class ProdutoComponent implements OnInit { 
   @Input() produto!: produtoModel;
+
+   mostrarModal: boolean = false;
+
+   abrirDescricao(): void {
+  this.mostrarModal = true;
+}
+
+fecharDescricao(): void {
+  this.mostrarModal = false;
+}
 
   constructor(
     private service: ProdutoService, 

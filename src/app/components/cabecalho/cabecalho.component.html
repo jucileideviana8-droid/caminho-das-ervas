@@ -1,42 +1,65 @@
 <header class="main-header">
   <div>
-        <img class="logo" src="assets/img/logo1.png" alt="Logo">
+    <!-- Logo do site -->
+    <img class="logo" src="assets/img/logo1.png" alt="Logo">
   </div>
+  
   <div class="content-header">
     <div class="top-row">
       
+      <!-- Barra de Busca Ajustada -->
       <div class="search-box">
-        <input type="text" placeholder="O que você está procurando?" 
-        class="search-input">
-        <span class="search-icon">&#128269;</span>
+        <input 
+          type="text" 
+          placeholder="O que você está procurando?" 
+          class="search-input"
+          (input)="onBusca($event)"> <!-- Chama a função de busca ao digitar -->
+        <span class="search-icon">🔍</span>
       </div>
 
+      <!-- Área de Login / Usuário -->
       <div>
         @if(!usuarioLogado){
-  <a class="user-menu" href="#" (click)="abrirLogin($event)">Login</a>
-}
-@else{
-  <div class="user-menu">
-  👤 {{ usuarioLogado }}
-  <!-- <label (click)="logout()">Sair</label> -->
-  <span class="material-icons logout-icon" (click)="logout()">logout</span>
-</div>
-}
+          <!-- Botão Login em formato de folha (estilizado no CSS) -->
+          <a class="user-menu" href="#" (click)="abrirLogin($event)">Login</a>
+        } @else {
+          <!-- Menu do Usuário Logado em formato de folha -->
+          <div class="user-menu">
+            👤 {{ usuarioLogado }}
+            <span class="material-icons logout-icon" (click)="logout()">logout</span>
+          </div>
+        }
       </div>
     </div>
 
+    <!-- Menu de Navegação por Categorias -->
     <nav class="nav-bar">
       <ul class="nav-list">
-        <li><a href="#" [ngClass]="{ 'active': paginaAtual=='paginaInicial' }" (click)="setPaginaAtual('paginaInicial')">Página principal</a></li>
-        <li><a href="#" [ngClass]="{ 'active': paginaAtual=='todos' }" (click)="setPaginaAtual('todos')">Todos os produtos</a></li>
-        <li><a href="#" [ngClass]="{ 'active': paginaAtual=='banho' }" (click)="setPaginaAtual('banho')">Banho e Cuidados</a></li>
-        <li><a href="#" [ngClass]="{ 'active': paginaAtual=='massagem' }" (click)="setPaginaAtual('massagem')">Massagem</a></li>
-        <li><a href="#" [ngClass]="{ 'active': paginaAtual=='fragrancia' }" (click)="setPaginaAtual('fragrancia')">Fragrância da Casa</a></li>
-        <li><a href="#" [ngClass]="{ 'active': paginaAtual=='cabelo' }" (click)="setPaginaAtual('cabelo')">Acessórios de Cabelo</a></li>
-        <li><a href="#" [ngClass]="{ 'active': paginaAtual=='pele' }" (click)="setPaginaAtual('pele')">Cuidados com a Pele</a></li>
-        <li><a href="#" [ngClass]="{ 'active': paginaAtual=='infantil' }" (click)="setPaginaAtual('infantil')">Acessórios Infantis</a></li>
+        <li>
+          <a href="#" [ngClass]="{'active': paginaAtual=='paginaInicial'}" (click)="setPaginaAtual($event, 'paginaInicial')">Página principal</a>
+        </li>
+        <li>
+          <a href="#" [ngClass]="{'active': paginaAtual=='todos'}" (click)="setPaginaAtual($event, 'todos')">Todos os produtos</a>
+        </li>
+        <li>
+          <a href="#" [ngClass]="{'active': paginaAtual=='banho'}" (click)="setPaginaAtual($event, 'banho')">Banho e Cuidados</a>
+        </li>
+        <li>
+          <a href="#" [ngClass]="{'active': paginaAtual=='massagem'}" (click)="setPaginaAtual($event, 'massagem')">Massagem</a>
+        </li>
+        <li>
+          <a href="#" [ngClass]="{'active': paginaAtual=='fragrancia'}" (click)="setPaginaAtual($event, 'fragrancia')">Fragrância da Casa</a>
+        </li>
+        <li>
+          <a href="#" [ngClass]="{'active': paginaAtual=='cabelo'}" (click)="setPaginaAtual($event, 'cabelo')">Acessórios de Cabelo</a>
+        </li>
+        <li>
+          <a href="#" [ngClass]="{'active': paginaAtual=='pele'}" (click)="setPaginaAtual($event, 'pele')">Cuidados com a Pele</a>
+        </li>
+        <li>
+          <a href="#" [ngClass]="{'active': paginaAtual=='infantil'}" (click)="setPaginaAtual($event, 'infantil')">Acessórios Infantis</a>
+        </li>
       </ul>
     </nav>
   </div>
-
 </header>

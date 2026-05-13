@@ -1,19 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { LoginComponent } from './login.component'; // Nome do arquivo e classe corrigidos
+import { FormsModule } from '@angular/forms'; // Necessário pois seu login usa forms
 
-import { Login } from './login';
-
-describe('Login', () => {
-  let component: Login;
-  let fixture: ComponentFixture<Login>;
+describe('LoginComponent', () => {
+  let component: LoginComponent;
+  let fixture: ComponentFixture<LoginComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Login],
+      // Importamos o componente e o FormsModule para suportar o ngModel
+      imports: [LoginComponent, FormsModule], 
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Login);
+    fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges(); // Substitui o whenStable para disparar o ciclo de vida inicial
   });
 
   it('should create', () => {

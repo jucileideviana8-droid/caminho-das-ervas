@@ -1,22 +1,9 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProdutoComponent } from '../produto/produto.component';
 import { CommonModule } from '@angular/common';
 import { produtoModel } from '../../models/produto.model';
 import { ProdutoService } from '../../services/produto.service';
 import { CategoriaType } from '../../types/categoria.type';
-
-
-
-interface Produto {
-  id: number;
-  nome: string;
-  descrição: string;
-  quantidade: number;
-  preco: number;
-  categoria: CategoriaType;
-  imagem: string
-
-}
 
 @Component({
   selector: 'app-produtos',
@@ -24,54 +11,43 @@ interface Produto {
   imports: [CommonModule, ProdutoComponent],
   templateUrl: './produtos.component.html',
   styleUrl: './produtos.component.css',
-
 })
-
-export class ProdutosComponent implements OnInit, OnChanges {
-  @Input() filtroProdutos!: CategoriaType | null | "todos";
-  produtos: produtoModel[] = []
-  produtosFiltrados: produtoModel[] = []
-
-
+export class ProdutosComponent implements OnInit {
+  produtos: produtoModel[] = [];
+  produtosFiltrados: produtoModel[] = [];
+  filtroAtual: any = "todos";
 
   constructor(private produtoService: ProdutoService) {}
-  ngOnChanges(changes: SimpleChanges): void {
-    this.aplicarfiltro(this.filtroProdutos);
-
-  }
-
-
 
   ngOnInit(): void {
-
-    this.produtoService.listar().subscribe((produtos: produtoModel[])=>{
-
-        this.produtos = produtos
-
-        this.aplicarfiltro(this.filtroProdutos)
-
+   
+    this.produtoService.listar().subscribe((produtos: produtoModel[]) => {
+      this.produtos = produtos;
+      this.ouvirFiltros();
     });
-
   }
 
-  aplicarfiltro(filtro: CategoriaType | null | "todos"){
-
-    if(filtro == null || filtro == "todos") {
-
-      this.produtosFiltrados = this.produtos
-
-    }
-
-    else{
-
-      this.produtosFiltrados = this.produtos.filter((produto)=>{
-
-        return produto.categoria == filtro
-
-      })
-
-    }
-
+  private ouvirFiltros() {
+    this.produtoService.filtro$.subscribe((filtro: any) => {
+      this.filtroAtual = filtro;
+      this.aplicarFiltro(filtro);
+    });
   }
 
+  aplicarFiltro(filtro: any) {
+    
+    if (!filtro || filtro === "todos" || filtro === "paginaInicial") {
+      this.produtosFiltrados = this.produtos;
+    } else {
+      const termoBusca = filtro.toLowerCase();
+      this.produtosFiltrados = this.produtos.filter((produto) => {
+        const categoria =  produto.categoria ?produto.categoria.toLowerCase() : '';
+        const nome =  produto.nome ? produto.nome.toLowerCase() : '';
+
+    
+        return categoria.includes(termoBusca) || nome.includes(termoBusca);
+    });
+  }
+  console.log('Produtos após filtro:', this.produtosFiltrados.length);
+}
 }

@@ -1,0 +1,90 @@
+/* Fundo escurecido que cobre toda a tela */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Garante que fique acima de tudo */
+  animation: fadeIn 0.3s ease;
+}
+
+/* Caixa do formulário */
+.modal {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: slideUp 0.3s ease;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4f6f5c; /* Verde do seu tema */
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  box-sizing: border-box; /* Garante que o padding não quebre a largura */
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #4f6f5c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #3f5f4d;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 20px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.alternativas {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.alternativas a {
+  color: #5b7f6a;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

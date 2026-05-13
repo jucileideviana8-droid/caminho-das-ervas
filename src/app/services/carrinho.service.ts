@@ -6,6 +6,9 @@ import { carrinhoModel } from '../models/carrinho.model';
   providedIn: 'root'
 })
 export class CarrinhoService {
+confirmarProdutos() {
+throw new Error('Method not implemented.');
+}
   private itens: carrinhoModel[] = [];
 
   constructor() {}

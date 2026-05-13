@@ -1,6 +1,5 @@
 .hero {
-    background: linear-gradient(rgba(44, 38, 79, 0.4), rgba(0,0,0,0.4)), url('https://shopee.com.br/Vela-Massagem-aromaterapia-(vegana)-Morango-ou-Lavanda-com-%C3%B3leo-de-rosa-mosqueta-em-pote-vidro-80g-i.449164108.58254642443?extraParams=%7B%22display_model_id%22%3A149553048185%2C%22model_selection_logic%22%3A3%7D') center/cover;
-    height: 400px;
+    background-color: #4d751b;     height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;

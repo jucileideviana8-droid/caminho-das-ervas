@@ -29,9 +29,8 @@
       }
     </div>
 
-    <div class="carrinho-footer">
-      <p>Total: {{ carrinhoService.getPrecoTotal() | currency:'BRL' }}</p>
-      <button class="btn-finalizar">Finalizar Compra</button>
-    </div>
-  </div>
+    <div class="footer-carrinho">
+  <button class="btn-finalizar" (click)="irParaPagamento()">
+    FINALIZAR COMPRA
+  </button>
 </div>

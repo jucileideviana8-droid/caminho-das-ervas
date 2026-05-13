@@ -1,6 +1,6 @@
 <div class="card">
     <div class="img-box">
-        <img [src]="produto.imagem" alt="{{produto.nome}}" class="product-image">
+        <img [src]="produto.imagem" alt="{{produto.nome}}" class="product-image"(click)="abrirDescricao()">
     </div>
     <div class="info">
         <h3>{{produto.nome}}</h3>
@@ -11,4 +11,16 @@
             Comprar Agora
         </button>
     </div>
+</div>
+<div *ngIf="mostrarModal" class="modal-overlay" (click)="fecharDescricao()">
+  <div class="modal-conteudo" (click)="$event.stopPropagation()">
+    <button class="botao-fechar" (click)="fecharDescricao()">&times;</button>
+    <h2>{{ produto.nome }}</h2>
+    <p class="categoria-modal">Categoria: {{ produto.categoria }}</p>
+    <div class="descricao-texto">
+      <h3>Descrição do Produto:</h3>
+      <p>{{ produto.descricao || 'Nenhuma descrição disponível para este produto.' }}</p>
+    </div>
+    <p class="preco-modal">Preço: {{ produto.preco | currency:'BRL' }}</p>
+  </div>
 </div>
